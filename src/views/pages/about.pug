@@ -7,4 +7,18 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  h1 Страничка "Обо Мне"  
+  section.hero
+    .hero__links
+      .hero__socials
+        ul.socials 
+          li.socials__element
+            a(href="#").social__element-link
+              .vk-svg 
+          li.socials__element
+            a(href="#").social__element-link
+              .gh-svg
+          li.socials__element
+            a(href="#").social__element-link
+              .in-svg
+  section.about
+  section.map    
