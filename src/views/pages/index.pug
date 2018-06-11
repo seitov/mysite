@@ -1,29 +1,44 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
-
   .welcome__wrap
     .log-in
-      .log-in__links
+      a(href="#").log-in__links
         .log-in__btn Авторизоваться
 
 
     .welcome__content
       .user
         .user__pic
-          img(src="", alt="").user__pic-img
+          img(src="../assets/images/user.jpg", alt="User").user__pic-img
         .user__description
-          .user__name Владимир Астахов
-          .user__info Личный сайт веб разрабочика
-        .welcome__socials
-          ul.socials 
-            li.socials__element
-              a(href="#").social__link 
+          .user__description-name Владимир Астахов
+          .user__description-info Личный сайт веб разрабочика
+
+      .welcome__socials
+        ul.socials 
+          li.socials__element
+            a(href="#").social__element-link
+              .vk-svg 
+          li.socials__element
+            a(href="#").social__element-link
+              .gh-svg
+          li.socials__element
+            a(href="#").social__element-link
+              .in-svg          
+              
+
+      nav.welcome__menu
+        ul.welcome__menu-list
+          li.welcome__menu-element 
+            a.welcome__menu-link(href="#") Мои работы 
+          li.welcome__menu-element 
+            a.welcome__menu-link(href="#") Обо мне
+          li.welcome__menu-element 
+            a.welcome__menu-link(href="#") Блог
+                
 
 
-    .welcome__copyright © Владимир Астахов | создано с любовью в LoftSchool | 2016 
+    .welcome__copyright © Владимирa Астахов | создано с любовью в LoftSchool | 2016 
 
                    
