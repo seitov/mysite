@@ -1,0 +1,14 @@
+.about {
+  display: flex;
+  flex-direction: row;
+}
+
+.about__left, .about__right {
+  position: relative;
+  width: 50%;
+}
+.about__triangle {
+  top: -110px;
+  position: absolute;
+  width: 100%;
+}
