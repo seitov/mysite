@@ -36,7 +36,7 @@ block content
           .user__description-info Личный сайт веб разрабочика
 
     a(href="#").down-btn.hero__down-btns
-      img(src="./assets/images/arrow_down.svg", alt="")      
+      img(src="./assets/images/arrow_down.svg", alt="btn")      
 
   section.about
     .about__left
@@ -44,10 +44,25 @@ block content
         svg(height="110" width="100%").triangle
           polygon(points="0,0 0,110 760,110" style="fill:#efeee9")
 
+      .about__wrap
+        h1.about__title - Обо мне -  
+        .about__title-pic
+          img(src="./assets/images/about_header.svg", alt="").section-title__pic 
+        .about__pic
+          img(src="./assets/images/user.jpg", alt="user")
+        .about__description
+          h2.about__description-title - Кто я -
+          .about__description-info  
+            p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            br         
+            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
 
     .about__right
       .about__triangle
         svg(height="110" width="100%").triangle
           polygon(points="760,0 0,110 760,110" style="fill:#eeebdf")
+
+          
           
   section.map    
