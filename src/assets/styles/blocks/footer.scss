@@ -7,7 +7,7 @@
   position: absolute;
   bottom: 0;
   z-index: 100;
-  color: #fff;
+  color: #ccc;
   &__row {
     border-bottom: 1px solid #ccc;
     height: 50%;
@@ -22,9 +22,57 @@
     }
     &-separation {
       width: 50%;
+      &__right {
+        justify-content: flex-end;
+        display: flex;
+      }
     }
     &-copyright {
       text-align: end;
     }
   }
+  &__menu {
+    &-item {
+      margin-right: 40px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &-link {
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    &-item {
+      margin-right: 20px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      height: 35px;
+      width: 35px;
+      transition: .4s;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        background: #fff;
+        border: none;
+      }
+    }
+    &-link {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.socials__link-icon {
+  height: 20px;
+  width: 20px;
+  fill: #ccc;
 }

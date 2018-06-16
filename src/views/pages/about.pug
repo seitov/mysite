@@ -8,18 +8,19 @@ block scripts
 
 block content
   section.hero
+    - 
+      var hero__socials = [
+        ['vk', 'http://vk.com'],
+        ['github', 'http://gh.com'],
+        ['in', 'http://in.com']
+      ]
+
     .hero__links
-      .hero__socials
-        ul.socials 
-          li.socials__element
-            a(href="#").social__element-link
-              .vk-svg 
-          li.socials__element
-            a(href="#").social__element-link
-              .gh-svg
-          li.socials__element
-            a(href="#").social__element-link
-              .in-svg
+      h2.hero__socials
+        each item in hero__socials
+          li.hero__socials-item
+            a(href=`${item[1]}`).hero__socials-link
+              +icon(item[0], 'socials__icon')  
 
     .hero__menu
       a.hamburger__menu-link(href="#")
@@ -94,4 +95,18 @@ block content
           
   section.map
     .map__container
+      .map__contacts
+        h2.map__contacts-title - Контакты -
+        - 
+          var contacts = [
+            ['skype', 'seitov999'],
+            ['envelope', 'seitovnurken@gmail.com'],
+            ['phone', '+7 777 406 6696'],
+            ['map_marker', 'г. Костанай, ул. Тарана, д. 135 ']
+          ]
+        ul.contacts
+          each item in contacts
+            li.contacts__item
+              +icon(item[0], 'contacts__icon')  
+              .contacts__text #{item[1]}
           
