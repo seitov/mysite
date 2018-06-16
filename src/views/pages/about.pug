@@ -63,6 +63,35 @@ block content
         svg(height="110" width="100%").triangle
           polygon(points="760,0 0,110 760,110" style="fill:#eeebdf")
 
+      .about__right-wrap
+        .about__right-title
+          p - Чем я могу быть -
+          p вам полезен 
+        .about__right-description.text-content
+          p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку. 
+        .about__right-content
+          - 
+            var skills = [
+              ['Frontend', [['HTML5', 30], ['CSS3', 50], ['JavaScript & jQuery', 70]]],
+              ['Backend', [['PHP', 30], ['mySQL', 50], ['Node.js & npm', 70], ['Mongo.db', 70]]],
+              ['Workflow', [['Git', 30], ['Gulp', 50], ['Bower', 70]]],
+            ]
+
+          ul.skills-list
+            each skillsrow in skills
+              li.skills-list__item.skills-row
+                .skills-row__title #{skillsrow[0]}
+                ul.skills-row__list
+                  each skill in skillsrow[1]
+                    li.skills-row__item
+                      figure.skill(data-percents="70")
+                        svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
+                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
+                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
+                        .skill__title #{skill[0]}    
+              
           
           
-  section.map    
+  section.map
+    .map__container
+          
