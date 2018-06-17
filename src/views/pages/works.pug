@@ -1,0 +1,126 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+
+block scripts
+  script(src='about.bundle.js')
+
+block content
+  section.hero
+    - 
+      var hero__socials = [
+        ['vk', 'http://vk.com'],
+        ['github', 'http://gh.com'],
+        ['in', 'http://in.com']
+      ]
+
+    .hero__links
+      h2.hero__socials
+        each item in hero__socials
+          li.hero__socials-item
+            a(href=`${item[1]}`).hero__socials-link
+              +icon(item[0], 'socials__icon')  
+
+    .hero__menu
+      a.hamburger__menu-link(href="#")
+        .hamburger__menu-link__bars     
+
+    .hero__title
+      .section-title
+        img(src="./assets/images/portfolio_header.svg", alt="").section-title__pic    
+      .user.about__user
+        .user__pic
+          img(src="./assets/images/user.jpg", alt="User").user__pic-img
+        .about__user-desc
+          .user__description-name Нуркен Сеитов
+          .user__description-info Личный сайт веб разрабочика
+
+    a(href="#").down-btn.hero__down-btns
+      img(src="./assets/images/arrow_down.svg", alt="btn")   
+
+  section.partfolio
+    .partfolio__title
+      .partfolio__title-container 
+        h1.partfolio__title-text - Мои работы -
+        .partfolio__title-pic
+          img(src="./assets/images/works_header.svg", alt="").section-title__pic
+    .partfolio__left
+      .about__triangle
+        svg(height="110" width="100%").triangle
+          polygon(points="0,0 0,110 760,110" style="fill:#faf8f0")
+      - 
+        var partfolio__desc = [
+              ['- Сайт школы онлайн Образования -', 'HTML , CSS, JAVASCRIPT', 'Посмотреть сайт', 'link']
+              //- ['Второй Сайт', 'Tech', 'Посмотреть сайт'],
+              //- ['Третий сайт', 'Tech', 'Посмотреть сайт']
+            ]
+
+      .partfolio__desc-block
+        ul.partfolio__desc
+          each item in partfolio__desc
+            li.partfolio__desc-item
+              h2.partfolio__desc-title #{item[0]}
+              .partfolio__desc-tech #{item[1]}
+              a(href="#").partfolio__desc-link
+                +icon(item[3], 'partfolio__desc-link-icon') 
+                span #{item[2]}
+              
+                      
+
+    .partfolio__right
+      .about__triangle
+        svg(height="110" width="100%").triangle
+          polygon(points="760,0 0,110 760,110" style="fill:#faf8f0")
+      .partfolio__slider 
+        .partfolio__slider-image
+          img(src="./assets/images/slider.png", alt="Slider-img")
+        .partfolio__slider-element
+          a(href="#").partfolio__slider-link
+            .partfolio__slider-prev
+            img(src="./assets/images/arrow_down.svg", alt="Down").arrow.arrow__prev  
+          a(href="#").partfolio__slider-link
+            .partfolio__slider-next 
+            img(src="./assets/images/arrow_down.svg", alt="Down").arrow.arrow__next   
+  
+  
+  section.reviews
+    .reviews__container  
+      h1.reviews__title - Что обо мне говорят -
+      .reviews__title-pic
+        img(src="./assets/images/about_header.svg", alt="About").section-title__pic
+      .reviews__info
+        .reviews__info-col
+          .reviews__info-text 
+            .reviews__info-quotes 
+            blockquote Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+          .reviews__info-user
+            .reviews__info-pic(style="background-image: url('./assets/images/user-1.jpg')")
+            .reviews__info-profile
+              .reviews__info-name Ковальчук Дмитрий
+              .reviews__info-desc основатель Loftschool
+        .reviews__info-col
+          .reviews__info-text 
+            .reviews__info-quotes 
+            blockquote Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+          .reviews__info-user
+            .reviews__info-pic(style="background-image: url('./assets/images/user-2.jpg')")
+            .reviews__info-profile
+              .reviews__info-name Владимир Сабанцев
+              .reviews__info-desc преподаватель
+        
+
+      form.form(action="post")
+        .form__wrap
+          h2.form__title - Связаться со мной -
+          .form__row
+            input(type="text" placeholder="Ваш имя").form__input
+          .form__row
+            input(type="text" placeholder="Ваш Email").form__input
+          .form__row
+            textarea(name="", cols="30", rows="10" placeholder="Введите сообщение").form__textarea
+        input(type="submit" value="Отправить").form__btn  
+        input(type="reset" value="Очистить").form__btn 
+
+    a(href="#").up__btn
+      img(src="./assets/images/arrow_down.svg", alt="btn").up__btn-img     

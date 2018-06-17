@@ -1,0 +1,76 @@
+.reviews {
+  min-height: 1300px;
+  background: url('./assets/images/reviews-bg.jpg');
+  background-size: cover;
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+  }
+  &__title {
+    font-family: 'bernier';
+    font-size: 63px;
+    margin-bottom: 60px;
+  }
+  &__title-pic {
+    position: absolute;
+    top: 50px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: row;
+    width: 750px;
+    margin-bottom: 70px; 
+  }
+  &__info-col {
+    width: 50%;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__info-text {
+    margin-bottom: 20px;
+  }
+  &__info-quotes {
+    font-size: 36px;
+    font-family: 'FontAwesome';
+    color: #dee0e1;
+  }
+  &__info-user {
+    display: flex;
+    flex-direction: row;
+    height: 77px;
+  }
+  &__info-profile {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $green;
+  }
+  &__info-name {
+    font-weight: 500;
+  }
+  &__info-pic {
+    width: 77px;
+    height: 77px;
+    border-radius: 50%; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+  }
+}
+
+.up__btn {
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  &-img {
+    transform: rotate(180deg);
+  }
+}

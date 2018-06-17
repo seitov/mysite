@@ -1,0 +1,67 @@
+.form {
+  height: 435px;
+  width: 380px;
+  background-color: rgba( 252, 252, 252, 0.6 );
+  border-radius: 5px;
+  &__wrap {
+    height: 88.9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  &__title {
+    font-family: 'bernier';
+    font-size: 35px;
+    margin: 20px 0;
+  }
+  &__row {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  &__input {
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    outline: none;
+    &:focus {
+      border: 1px solid $green;
+    }
+  }
+  &__textarea {
+    padding: 10px 15px;
+    width: 100%;
+    resize: none;
+    height: 140px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    outline: none;
+    &:focus {
+      border: 1px solid $green;
+    }
+  }
+  &__btn {
+    width: 50%;
+    background: $green;
+    border: none;
+    color: #fff;
+    padding: 15px 0;
+    border-right: 1px solid #ccc;
+    border-radius: 0 0 0 5px;
+    cursor: pointer;
+    transition: .4s;
+    &:last-child {
+      border-right: 0;
+      border-radius: 0 0 5px 0;
+    }
+    &:hover {
+      background: #268c8b;
+    }
+  }
+}
+
+
+
+
