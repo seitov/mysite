@@ -1,5 +1,5 @@
 .hero {
-  background-image: url('./assets/images/about-bg.jpg');
+  background-image: url("./assets/images/about-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 600px;
@@ -16,6 +16,11 @@
     right: 30px;
     top: 30px;
     position: absolute;
+  }
+  &__triangles {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
   }
 }
 
@@ -73,7 +78,7 @@
   fill: #fff;
   height: 30px;
   width: 30px;
-  transition: .4s;
+  transition: 0.4s;
   &:hover {
     fill: $green;
   }
@@ -96,7 +101,7 @@
   width: 100%;
   &__pic {
     opacity: 0.1;
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -114,4 +119,21 @@
   bottom: 70px;
   position: absolute;
   z-index: 100;
+}
+
+.triangles {
+  display: flex;
+  flex-direction: row;
+  height: 110px;
+  &__left {
+    width: 50%;
+  }
+  &__right {
+    width: 50%;
+  }
+}
+
+.triangle {
+  height: 100%;
+  width: 100%;
 }
