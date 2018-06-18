@@ -1,5 +1,5 @@
 .hero {
-  background-image: url('./assets/images/about-bg.jpg');
+  background-image: url("./assets/images/about-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 600px;
@@ -78,7 +78,7 @@
   fill: #fff;
   height: 30px;
   width: 30px;
-  transition: .4s;
+  transition: 0.4s;
   &:hover {
     fill: $green;
   }
@@ -101,7 +101,7 @@
   width: 100%;
   &__pic {
     opacity: 0.1;
-    width: 100%;
+    width: 90%;
   }
 }
 
