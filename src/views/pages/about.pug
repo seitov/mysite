@@ -37,14 +37,20 @@ block content
           .user__description-info Личный сайт веб разрабочика
 
     a(href="#").down-btn.hero__down-btns
-      img(src="./assets/images/arrow_down.svg", alt="btn")      
+      img(src="./assets/images/arrow_down.svg", alt="btn")
+
+    .hero__triangles
+      .triangles
+        .triangles__left 
+          svg(viewBox="0 0 600 100" preserveAspectRatio="none").triangle 
+            polygon(points="0 0, 0 100, 600 100" style="fill:#efeee9")
+
+        .triangles__right 
+          svg(viewBox="0 0 600 100" preserveAspectRatio="none").triangle 
+            polygon(points="600 0, 600 100, 0 100" style="fill:#eeebdf")        
 
   section.about
     .about__left
-      .about__triangle
-        svg(height="110" width="100%").triangle
-          polygon(points="0,0 0,110 760,110" style="fill:#efeee9")
-
       .about__wrap
         h1.about__title - Обо мне -  
         .about__title-pic
@@ -60,10 +66,6 @@ block content
 
 
     .about__right
-      .about__triangle
-        svg(height="110" width="100%").triangle
-          polygon(points="760,0 0,110 760,110" style="fill:#eeebdf")
-
       .about__right-wrap
         .about__right-title
           p - Чем я могу быть -

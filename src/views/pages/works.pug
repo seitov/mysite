@@ -37,7 +37,17 @@ block content
           .user__description-info Личный сайт веб разрабочика
 
     a(href="#").down-btn.hero__down-btns
-      img(src="./assets/images/arrow_down.svg", alt="btn")   
+      img(src="./assets/images/arrow_down.svg", alt="btn")
+
+    .hero__triangles
+      .triangles
+        .triangles__left 
+          svg(viewBox="0 0 600 100" preserveAspectRatio="none").triangle 
+            polygon(points="0 0, 0 100, 600 100" style="fill:#faf8f0")
+
+        .triangles__right 
+          svg(viewBox="0 0 600 100" preserveAspectRatio="none").triangle 
+            polygon(points="600 0, 600 100, 0 100" style="fill:#faf8f0")      
 
   section.partfolio
     .partfolio__title
@@ -46,9 +56,6 @@ block content
         .partfolio__title-pic
           img(src="./assets/images/works_header.svg", alt="").section-title__pic
     .partfolio__left
-      .about__triangle
-        svg(height="110" width="100%").triangle
-          polygon(points="0,0 0,110 760,110" style="fill:#faf8f0")
       - 
         var partfolio__desc = [
               ['- Сайт школы онлайн Образования -', 'HTML , CSS, JAVASCRIPT', 'Посмотреть сайт', 'link']
@@ -69,9 +76,6 @@ block content
                       
 
     .partfolio__right
-      .about__triangle
-        svg(height="110" width="100%").triangle
-          polygon(points="760,0 0,110 760,110" style="fill:#faf8f0")
       .partfolio__slider 
         .partfolio__slider-image
           img(src="./assets/images/slider.png", alt="Slider-img")
