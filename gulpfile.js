@@ -101,7 +101,7 @@ gulp.task("svg", done => {
         }
       })
     )
-    .pipe(gulp.dest(`${config.DIST_DIR}/assets/images/icons`));
+    .pipe(gulp.dest(`${config.DIST_DIR}assets/images/icons`));
 });
 
 // просто переносим картинки
