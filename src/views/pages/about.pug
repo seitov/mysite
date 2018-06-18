@@ -16,7 +16,7 @@ block content
       ]
 
     .hero__links
-      h2.hero__socials
+      ul.hero__socials
         each item in hero__socials
           li.hero__socials-item
             a(href=`${item[1]}`).hero__socials-link
@@ -99,14 +99,15 @@ block content
         h2.map__contacts-title - Контакты -
         - 
           var contacts = [
-            ['skype', 'seitov999'],
-            ['envelope', 'seitovnurken@gmail.com'],
-            ['phone', '+7 777 406 6696'],
-            ['map_marker', 'г. Костанай, ул. Тарана, д. 135 ']
+            ['skype', 'seitov999', 'skype:seitov999?call'],
+            ['envelope', 'seitovnurken@gmail.com', 'mailto:seitovnurken@gmail.com?subject=связаться со мной'],
+            ['phone', '+7 777 406 6696', 'tel:+77774066696'],
+            ['map_marker', 'г. Костанай, ул. Тарана, д. 135', 'https://yandex.kz/maps/10295/kostanai/?ll=63.631031%2C53.213062&z=13']
           ]
         ul.contacts
           each item in contacts
             li.contacts__item
-              +icon(item[0], 'contacts__icon')  
-              .contacts__text #{item[1]}
+              a(href=`${item[2]}`).contacts__link
+                +icon(item[0], 'contacts__icon')  
+                .contacts__text #{item[1]}
           
