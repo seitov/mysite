@@ -1,0 +1,25 @@
+.post {
+  border-bottom: 5px solid #f1f1f2;
+  padding-bottom: 70px;
+  margin-bottom: 60px;
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  &__title {
+    font-family: 'bernier';
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  &__date {
+    color: $green;
+    margin-bottom: 20px;
+  }
+  &__text p {
+    margin-bottom: 20px;
+  }
+  &__img {
+    width: 100%;
+  }
+}
