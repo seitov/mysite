@@ -97,9 +97,17 @@
   &-element {
     height: 100%;
     display: inline-block;
-    width: calc(380px / 3);
     border-right: 1px solid #fff;
     transition: .4s;
+    &-works {
+      width: 40%;
+    }
+    &-about {
+      width: 34%;
+    }
+    &-blog {
+      width: 26%;
+    }
     &:last-child {
       border: none;
     }

@@ -1,0 +1,17 @@
+.blog {
+  min-height: 1300px;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    padding: 60px 45px;
+  }
+}
+
+.blog__hero-title {
+  font-family: 'bernier';
+  font-size: 65px;
+}
+
+.section-title__pic-blog {
+  width: 50%;
+}

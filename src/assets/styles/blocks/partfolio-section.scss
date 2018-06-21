@@ -109,14 +109,21 @@
     justify-content: center;
     align-items: center;
     border-right: 1px solid #c7c6c1;
+    &:hover .partfolio__slider-prev {
+      opacity: 0.6;
+    }
+    &:hover .partfolio__slider-next {
+      opacity: 0.6;
+    }
   }
   &__slider-prev {
     background-image: url('./assets/images/Mockup.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.3;
     height: 100%;
     width: 100%;
+    opacity: 0.3;
+    transition: .4s;
   }
   &__slider-next {
     width: 100%;
@@ -128,6 +135,7 @@
     align-items: center;
     display: flex;
     opacity: 0.3;
+    transition: .4s;
   }
 }
 

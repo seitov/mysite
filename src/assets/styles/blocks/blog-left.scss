@@ -1,10 +1,4 @@
 .blog {
-  min-height: 1300px;
-  &__container {
-    display: flex;
-    flex-direction: row;
-    padding: 60px 45px;
-  }
   &__left {
     width: 20%;
   }
@@ -34,16 +28,4 @@
     align-items: center;
     text-align: end;
   }
-  &__content {
-    padding: 0 100px;
-  }
-}
-
-.blog__hero-title {
-  font-family: 'bernier';
-  font-size: 65px;
-}
-
-.section-title__pic-blog {
-  width: 50%;
 }
