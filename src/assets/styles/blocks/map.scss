@@ -8,9 +8,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include phones {
-      padding-bottom: 50%;
-    }
   }
   &__contacts {
     border-radius: 5px;

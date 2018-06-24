@@ -7,12 +7,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-  @include tablets {
-    height: 50vh;
-  }
-  @include phones {
-    height: 100vh;
-  }
   &__links {
     position: absolute;
     top: 30px;
@@ -128,6 +122,11 @@
   bottom: 70px;
   position: absolute;
   z-index: 100;
+  opacity: 0.6;
+  transition: .4s;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .triangles {

@@ -26,4 +26,7 @@
 
 .blog__content {
   padding: 0 100px;
+  @include tablets {
+    padding: 0;
+  }
 }
