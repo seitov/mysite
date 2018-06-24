@@ -1,10 +1,16 @@
 .about {
   display: flex;
   flex-direction: row;
+  @include tablets {
+    flex-direction: column;
+  }
   &__left,
   &__right {
     position: relative;
     width: 50%;
+    @include tablets {
+      width: 100%;
+    }
   }
   &__left {
     background: #efeee9;
@@ -21,6 +27,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    @include phones {
+      padding: 50px 10px;
+    }
   }
   &__triangle {
     top: -110px;
@@ -50,6 +59,12 @@
 
 .about__right-wrap {
   padding: 50px 40px;
+  @include tablets {
+    padding: 50px 155px;
+  }
+  @include phones {
+    padding: 50px 10px;
+  }
 }
 
 .about__right-title {
@@ -63,6 +78,19 @@
   margin-bottom: 50px;
 }
 
+.about__right-content {
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.skills-list {
+  @include phones {
+    padding: 0 20px;
+  }
+}
+
 .skills-row {
   margin-bottom: 40px;
   display: block;
@@ -72,17 +100,34 @@
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 15px;
+  @include tablets {
+   text-align: center;
+  }
 }
 
 .skills-row__list {
   display: flex;
   flex-direction: row;
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
+  @include phones {
+    flex-wrap: wrap;
+  }
 }
 
 .skills-row__item {
   margin-right: 40px;
   &:last-child {
     margin-right: 0;
+  }
+  @include phones {
+    margin-right: 35px;
+    &:nth-child(2) {
+      margin-right: 0px;
+      margin-bottom: 35px;
+    }
   }
 }
 
