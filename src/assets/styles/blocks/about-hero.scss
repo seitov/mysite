@@ -7,6 +7,12 @@
   position: relative;
   display: flex;
   justify-content: center;
+  @include tablets {
+    height: 50vh;
+  }
+  @include phones {
+    height: 100vh;
+  }
   &__links {
     position: absolute;
     top: 30px;
@@ -99,6 +105,9 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  @include tablets {
+    display: none;
+  }
   &__pic {
     opacity: 0.1;
     width: 90%;

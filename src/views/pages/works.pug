@@ -58,7 +58,7 @@ block content
     .partfolio__left
       - 
         var partfolio__desc = [
-              ['- Сайт школы онлайн Образования -', 'HTML , CSS, JAVASCRIPT', 'Посмотреть сайт', 'link']
+              ['Сайт школы онлайн Образования', 'HTML , CSS, JAVASCRIPT', 'Посмотреть сайт', 'link']
               //- ['Второй Сайт', 'Tech', 'Посмотреть сайт'],
               //- ['Третий сайт', 'Tech', 'Посмотреть сайт']
             ]
@@ -90,7 +90,7 @@ block content
   
   section.reviews
     .reviews__container  
-      h1.reviews__title - Что обо мне говорят -
+      h1.reviews__title Что обо мне говорят
       .reviews__title-pic
         img(src="./assets/images/about_header.svg", alt="About").section-title__pic
       .reviews__info
@@ -113,21 +113,19 @@ block content
               .reviews__info-name Владимир Сабанцев
               .reviews__info-desc преподаватель
         
-      .blur
-      .blur__background
-      img.blur__img(src="#", alt="Blur img")
-      .blur__wrap
-      form.form(action="post")
-        .form__wrap
-          h2.form__title - Связаться со мной -
-          .form__row
-            input(type="text" placeholder="Ваш имя").form__input
-          .form__row
-            input(type="text" placeholder="Ваш Email").form__input
-          .form__row
-            textarea(name="", cols="30", rows="10" placeholder="Введите сообщение").form__textarea
-        input(type="submit" value="Отправить").form__btn  
-        input(type="reset" value="Очистить").form__btn 
+      .reviews__form-container
+        form.form.form__blured#form-blured(action="post")
+          .form__bg
+          .form__wrap
+            h2.form__title - Связаться со мной -
+            .form__row
+              input(type="text" placeholder="Ваш имя").form__input
+            .form__row
+              input(type="text" placeholder="Ваш Email").form__input
+            .form__row
+              textarea(name="", cols="30", rows="10" placeholder="Введите сообщение").form__textarea
+          input(type="submit" value="Отправить").form__btn  
+          input(type="reset" value="Очистить").form__btn   
 
     a(href="#").up__btn
       img(src="./assets/images/arrow_down.svg", alt="btn").up__btn-img     

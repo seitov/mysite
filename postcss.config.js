@@ -12,6 +12,10 @@ module.exports = {
       variables: require("./src/assets/styles/variables")
     }),
     require("postcss-nested"),
+    require("postcss-pxtorem")({
+      propList: ["*"],
+      mimPixelValue: 6
+    }),
     require("postcss-rgb"),
     require("postcss-inline-comment"),
     require("postcss-inline-svg")({

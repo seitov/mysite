@@ -1,8 +1,25 @@
 .form {
   height: 435px;
   width: 380px;
-  background-color: rgba( 252, 252, 252, 0.6 );
-  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  &__blured {
+    .form__bg {
+      background-image: url('./assets/images/reviews-bg.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: blur(10px);
+    border-radius: 5px;
+  }
   &__wrap {
     height: 88.9%;
     display: flex;
@@ -10,6 +27,7 @@
     align-items: center;
     flex-direction: column;
     padding: 0 20px;
+    position: relative;
   }
   &__title {
     font-family: 'bernier';
@@ -43,6 +61,7 @@
     }
   }
   &__btn {
+    position: relative;
     width: 50%;
     background: $green;
     border: none;
@@ -51,6 +70,7 @@
     border-right: 1px solid #ccc;
     border-radius: 0 0 0 5px;
     cursor: pointer;
+    outline: none;
     transition: .4s;
     &:last-child {
       border-right: 0;
@@ -61,7 +81,3 @@
     }
   }
 }
-
-
-
-
