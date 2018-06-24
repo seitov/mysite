@@ -31,6 +31,10 @@
       padding: 50px 10px;
     }
   }
+  &__pic {
+    max-width: 400px;
+    max-height: 400px;
+  }
   &__triangle {
     top: -110px;
     position: absolute;
