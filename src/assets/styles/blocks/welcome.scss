@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  color: #fff; // background: url('./assets/images/welcome-bg.jpg');
+  color: #fff;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -54,7 +54,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    cursor: pointer;
     transform-style: preserve-3d;
     transform-origin: center right;
     transition: transform 1s;
@@ -64,6 +63,16 @@
   }
   &-log-in {
     transform: rotateY(180deg);
+  }
+  &-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    backface-visibility: hidden;
   }
 }
 
@@ -109,14 +118,27 @@
   height: 100%;
 }
 
+.welcome__menu-wrap {
+  position: relative;
+  height: 45px;
+  width: 100%;
+  bottom: 0;
+}
+
 .welcome__menu {
   width: 100%;
   height: 45px;
   background: $green;
   opacity: 0.85;
-  position: absolute;
+  position: relative;
   bottom: 0;
   border-radius: 0 0 5px 5px;
+  backface-visibility: hidden;
+  &-wrap {
+    position: absolute;
+    bottom: 0;
+    backface-visibility: hidden;
+  }
   &-list {
     height: 100%;
   }

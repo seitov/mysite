@@ -33,34 +33,35 @@ block content
     .welcome__content-scene
       .welcome__content-wrap
         .welcome__content
-          .user
-            .user__pic
-              img(src="./assets/images/user.jpg", alt="User").user__pic-img
-            .user__description
-              .user__description-name Нуркен Сеитов
-              .user__description-info Личный сайт веб разрабочика
+          .welcome__content-container
+            .user
+              .user__pic
+                img(src="./assets/images/user.jpg", alt="User").user__pic-img
+              .user__description
+                .user__description-name Нуркен Сеитов
+                .user__description-info Личный сайт веб разрабочика
 
-          .welcome__socials
-            ul.socials 
-              li.socials__element
-                a(href="https://vk.com/seitov_nurken").social__element-link
-                  .vk-svg 
-              li.socials__element
-                a(href="https://github.com/seitov").social__element-link
-                  .gh-svg
-              li.socials__element
-                a(href="https://www.linkedin.com/in/seitov").social__element-link
-                  .in-svg          
+            .welcome__socials
+              ul.socials 
+                li.socials__element
+                  a(href="https://vk.com/seitov_nurken").social__element-link
+                    .vk-svg 
+                li.socials__element
+                  a(href="https://github.com/seitov").social__element-link
+                    .gh-svg
+                li.socials__element
+                  a(href="https://www.linkedin.com/in/seitov").social__element-link
+                    .in-svg          
                   
-
-          nav.welcome__menu
-            ul.welcome__menu-list
-              li.welcome__menu-element.welcome__menu-element-works 
-                a.welcome__menu-link(href="./works.html") Мои работы 
-              li.welcome__menu-element.welcome__menu-element-about 
-                a.welcome__menu-link(href="./about.html") Обо мне
-              li.welcome__menu-element.welcome__menu-element-blog 
-                a.welcome__menu-link(href="./blog.html") Блог
+            .welcome__menu-wrap
+              nav.welcome__menu
+                ul.welcome__menu-list
+                  li.welcome__menu-element.welcome__menu-element-works 
+                    a.welcome__menu-link(href="./works.html") Мои работы 
+                  li.welcome__menu-element.welcome__menu-element-about 
+                    a.welcome__menu-link(href="./about.html") Обо мне
+                  li.welcome__menu-element.welcome__menu-element-blog 
+                    a.welcome__menu-link(href="./blog.html") Блог
                     
         .welcome__content.welcome__content-log-in
           form(action="post").log-in-form
@@ -94,8 +95,9 @@ block content
                   span Не уверен
 
             .log-in-form__btns                         
-              input(type="submit" value="Отправить").form__btn  
-              input(type="reset" value="Очистить").form__btn
+              a(href="./index.html").log-in-form__link 
+                span На главную
+              input(type="submit" value="Войти").form__btn
 
 
     .welcome__copyright 
