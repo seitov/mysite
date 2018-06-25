@@ -1,6 +1,32 @@
 extends ../auth.layout.pug
 
+block scripts
+  script(src='auth.bundle.js')
+
 block content
+  .parallax
+    .parallax__layer
+      img.parallax__img(src="./assets/images/layer-01.png", alt="Layer-01")
+    .parallax__layer
+      img.parallax__img(src="./assets/images/layer-02.png", alt="Layer-02")
+    .parallax__layer
+      img.parallax__img(src="./assets/images/layer-03.png", alt="Layer-03")
+    .parallax__layer
+      img.parallax__img(src="./assets/images/layer-04.png", alt="Layer-04")
+    .parallax__layer
+      img.parallax__img(src="./assets/images/layer-05.png", alt="Layer-05")
+    .parallax__layer
+      img.parallax__img(src="./assets/images/layer-06.png", alt="Layer-06")
+    .parallax__layer
+      img.parallax__img(src="./assets/images/layer-07.png", alt="Layer-07")
+    .parallax__layer
+      img.parallax__img(src="./assets/images/layer-08.png", alt="Layer-08")
+    .parallax__layer
+      img.parallax__img(src="./assets/images/layer-09.png", alt="Layer-09")
+    .parallax__layer
+      img.parallax__img(src="./assets/images/layer-10.png", alt="Layer-10")
+
+
   .welcome__wrap
     .log-in
       a(href="#").log-in__links
