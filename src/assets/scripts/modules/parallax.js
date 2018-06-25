@@ -10,9 +10,13 @@ const moveLayers = e => {
     const positionX = initialX * devider;
     const positionY = initialY * devider;
     const bottomPosition = (window.innerHeight / 2) * devider;
+    const leftPosition = (window.innerWidth / 2) * devider;
+    const rightPosition = (window.innerWidth / 2) * devider;
     const image = layer.firstElementChild;
 
     image.style.bottom = `-${bottomPosition}px`;
+    image.style.left = `-${leftPosition}px`;
+    image.style.right = `-${rightPosition}px`;
     layer.style.transform = `translate(${positionX}px, ${positionY}px)`;
   });
 };
