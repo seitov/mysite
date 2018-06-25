@@ -6,8 +6,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  color: #fff;
-  // background: url('./assets/images/welcome-bg.jpg');
+  color: #fff; // background: url('./assets/images/welcome-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -38,13 +37,34 @@
 .welcome__content {
   border-radius: 5px;
   background-color: rgba( 252, 252, 252, 0.85);
-  height: 395px;
-  width: 380px;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: absolute;
+  backface-visibility: hidden;
+  &-scene {
+    width: 380px;
+    height: 395px;
+    perspective: 600px;
+  }
+  &-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+  }
+  &-wrap__is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+  &-log-in {
+    transform: rotateY(180deg);
+  }
 }
 
 .user {
