@@ -60,9 +60,16 @@
       border: 1px solid $green;
     }
   }
+  &__btns {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
   &__btn {
     position: relative;
     width: 50%;
+    height: 45px;
+    bottom: 0;
     background: $green;
     border: none;
     color: #fff;

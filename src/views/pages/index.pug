@@ -1,5 +1,6 @@
 extends ../auth.layout.pug
 
+
 block content
   .parallax
     .parallax__layer
@@ -60,6 +61,38 @@ block content
           li.welcome__menu-element.welcome__menu-element-blog 
             a.welcome__menu-link(href="./blog.html") Блог
                 
+    .welcome__content
+      form(action="post").log-in-form
+        h2.log-in-form__title - Авторизуйтесь -
+        .log-in-form__row
+          .log-in-form__icon 
+          input(type="text" placeholder="Логин").log-in-form__input
+        .log-in-form__row
+          .log-in-form__icon 
+          input(type="text" placeholder="Пароль").log-in-form__input
+        .log-in-form__row.log-in-form__row-radio
+          label(for="human").log-in-form__checkbox
+            input(type="checkbox")#human.log-in-form__checkbox-input
+            .log-in-form__checkbox-text
+              .log-in-form__checkbox-btn
+              span Я человек
+              
+        .log-in-form__question Вы точно человек? 
+        .log-in-form__row.log-in-form__row-radio
+          label(for="Yes").log-in-form__radio
+            input(type="radio" name="human" value="Да")#Yes.log-in-form__radio-input
+            .log-in-form__radio-text
+              .log-in-form__radio-btn
+              span Да
+          label(for="No").log-in-form__radio
+            input(type="radio" name="human" value="Да")#No.log-in-form__radio-input
+            .log-in-form__radio-text
+              .log-in-form__radio-btn
+              span Не уверен
+
+        .log-in-form__btns                         
+          input(type="submit" value="Отправить").form__btn  
+          input(type="reset" value="Очистить").form__btn
 
 
     .welcome__copyright 

@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   color: #fff;
   // background: url('./assets/images/welcome-bg.jpg');
   background-size: cover;
@@ -107,18 +107,26 @@
     transition: .4s;
     &-works {
       width: 40%;
+      &:hover {
+        background: #0b8f87;
+        border-radius: 0 0 0 5px;
+      }
     }
     &-about {
       width: 34%;
+      &:hover {
+        background: #0b8f87;
+      }
     }
     &-blog {
       width: 26%;
+      &:hover {
+        background: #0b8f87;
+        border-radius: 0 0 5px 0;
+      }
     }
     &:last-child {
       border: none;
-    }
-    &:hover {
-        background: #0b8f87;
     }
   }
   &-link {
