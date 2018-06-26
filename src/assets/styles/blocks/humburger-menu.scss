@@ -1,0 +1,37 @@
+.overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $green;
+  opacity: 0.9;
+  z-index: 50;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  transition: .4s;
+  &__open {
+    display: flex;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'bernier';
+    font-size: 63px;
+  }
+  &__menu-link {
+    color: #fff;
+    &:hover {
+      &::after {
+        content: ' -';
+      }
+      &::before {
+        content: '- ';
+      }
+    }
+  }
+}

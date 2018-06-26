@@ -1,0 +1,107 @@
+.hero__menu {
+  right: 30px;
+  top: 30px;
+  position: absolute;
+  z-index: 100;
+  opacity: 0.5;
+  transition: .4s;
+  &:hover {
+    opacity: 1;
+  }
+  &-active {
+    background: orange;
+  }
+}
+
+.hamburger__menu-link {
+  vertical-align: middle;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.hamburger__menu-bars {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 45px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+}
+ 
+
+.hamburger__menu-bars span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 6px;
+  border-radius: 2px;
+  background: white;
+  transition: 0;
+}
+
+.hamburger__menu-bars span::before,
+.hamburger__menu-bars span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 2px;
+  background-color: #fff;
+  content: "";
+}
+
+.hamburger__menu-bars span::before {
+  top: -15px;
+}
+ 
+.hamburger__menu-bars span::after {
+  bottom: -15px;
+}
+ 
+.hamburger__menu-bars span {
+  transition: background 0s 0s;
+}
+ 
+.hamburger__menu-bars span::before,
+.hamburger__menu-bars span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0s, 0s;
+}
+ 
+.hamburger__menu-bars span::before {
+  transition-property: top, transform;
+}
+ 
+.hamburger__menu-bars span::after {
+  transition-property: bottom, transform;
+}
+ 
+.hamburger__menu-bars.hamburger__menu-bars-active span {
+  background: none;
+}
+ 
+.hamburger__menu-bars.hamburger__menu-bars-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+ 
+.hamburger__menu-bars.hamburger__menu-bars-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+ 
+.hamburger__menu-bars.hamburger__menu-bars-active span::before,
+.hamburger__menu-bars.hamburger__menu-bars-active span::after {
+  transition-delay: 0s, 0.3s;
+}

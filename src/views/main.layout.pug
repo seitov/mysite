@@ -14,7 +14,9 @@ html(lang="ru")
     .wrapper
       .maincontent
         block content
+        include ./common/humburger-btn.pug 
 
+      include ./common/humburger-overlay.pug
       include ./common/footer.pug
 
     script(src='bootloader.bundle.js')

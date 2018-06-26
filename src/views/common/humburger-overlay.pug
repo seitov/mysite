@@ -1,0 +1,13 @@
+.overlay
+  - 
+    var overlay__menu = [
+      ['Мои работы', './works.html'],
+      ['Обо мне', './about.html'],
+      ['Блог', './blog.html'],
+      ['Авторизация', './index.html']
+    ]
+  nav.overlay__nav
+    ul.overlay__menu
+      each item in overlay__menu
+        li.overlay__menu-item
+         a(href=`${item[1]}`).overlay__menu-link #{item[0]}
