@@ -48,7 +48,6 @@ block content
             polygon(points="600 0, 600 100, 0 100" style="fill:#fff")      
   section.blog
     .blog__container
-      .blog__dropright
       .blog__left
         nav.blog__nav
           - 
@@ -63,6 +62,7 @@ block content
               li.blog__item
                 a(href=`${item[1]}` class=`${item[2]}`).blog__link  
                   .blog__anons #{item[0]}
+        a(href="#").dropright__btn#dropright__btn  
 
       .blog__right
         .blog__content
