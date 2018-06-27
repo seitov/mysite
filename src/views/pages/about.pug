@@ -58,7 +58,7 @@ block content
         .about__description
           h2.about__description-title - Кто я -
           .about__description-info  
-            p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            p Я веб разработчик из Костаная. Мне 24 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
             br         
             p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
@@ -71,27 +71,7 @@ block content
         .about__right-description.text-content
           p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку. 
         .about__right-content
-          - 
-            var skills = [
-              ['Frontend', [['HTML5', 30], ['CSS3', 50], ['JS & jQuery', 70]]],
-              ['Backend', [['PHP', 30], ['mySQL', 50], ['Node.js & npm', 70], ['Mongo.db', 70]]],
-              ['Workflow', [['Git', 30], ['Gulp', 50], ['Bower', 70]]],
-            ]
-
-          ul.skills-list
-            each skillsrow in skills
-              li.skills-list__item.skills-row
-                .skills-row__title #{skillsrow[0]}
-                ul.skills-row__list
-                  each skill in skillsrow[1]
-                    li.skills-row__item
-                      figure.skill(data-percents="70")
-                        svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
-                        .skill__title #{skill[0]}    
-              
-          
+          #skills-container         
           
   section.map
     .map__container
@@ -102,7 +82,7 @@ block content
             ['skype', 'seitov999', 'skype:seitov999?call'],
             ['envelope', 'seitovnurken@gmail.com', 'mailto:seitovnurken@gmail.com?subject=связаться со мной'],
             ['phone', '+7 777 406 6696', 'tel:+77774066696'],
-            ['map_marker', 'г. Костанай, ул. Тарана, д. 135', 'https://yandex.kz/maps/10295/kostanai/?ll=63.631031%2C53.213062&z=13']
+            ['map_marker', 'г. Костанай, ул. Тарана, д. 135', 'https://yandex.kz/maps/10295/kostanai/?ll=63.622780%2C53.221278&z=19&mode=whatshere&whatshere%5Bpoint%5D=63.621930%2C53.221196&whatshere%5Bzoom%5D=19']
           ]
         ul.contacts
           each item in contacts
