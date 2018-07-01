@@ -4,6 +4,9 @@
   left: 0;
   right: 0;
   bottom: 0;
+  @include tablets {
+    display: none;
+  }
   &__layer {
     position: absolute;
     top: 0;

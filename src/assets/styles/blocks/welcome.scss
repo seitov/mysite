@@ -7,8 +7,11 @@
   align-items: center;
   flex-direction: row;
   color: #fff;
-  background-size: cover;
-  background-repeat: no-repeat;
+  @include tablets{
+    background-image: url("./assets/images/about-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .log-in {
@@ -81,11 +84,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   &__pic {
     height: 140px;
     width: 140px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     &-img {
       border-radius: 50%;
     }
@@ -103,6 +106,7 @@
 .socials {
   display: inline-block;
   height: 30px;
+  margin-bottom: 20px;
   &__element {
     display: inline-block;
     height: 100%;
@@ -116,6 +120,11 @@
 .social__element-link {
   display: inline-block;
   height: 100%;
+  opacity: 0.7;
+  transition: .4s;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .welcome__menu-wrap {

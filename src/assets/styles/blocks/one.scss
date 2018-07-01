@@ -1,37 +1,25 @@
 .vk-svg {
   background: svg-load('vk.svg', fill=$green) center center no-repeat;
-  width: 30px;
+  width: 40px;
   height: 30px;
   cursor: pointer;
   display: inline-block;
-
-  &:hover {
-    background-image: svg-load('vk.svg', fill=#0b8f87);
-  }
 }
 
 .gh-svg {
   background: svg-load('github.svg', fill=$green) center center no-repeat;
-  width: 30px;
+  width: 40px;
   height: 30px;
   cursor: pointer;
   display: inline-block;
-
-  &:hover {
-    background-image: svg-load('github.svg', fill=#0b8f87);
-  }
 }
 
 .in-svg {
   background: svg-load('in.svg', fill=$green) center center no-repeat;
-  width: 30px;
+  width: 40px;
   height: 30px;
   cursor: pointer;
   display: inline-block;
-
-  &:hover {
-    background-image: svg-load('in.svg', fill=#0b8f87);
-  }
 }
 
 .test {

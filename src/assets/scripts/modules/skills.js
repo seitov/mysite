@@ -43,7 +43,6 @@ new Vue({
   created() {
     const data = require("../../../data/skills.json");
     this.skills = data;
-    console.log(data);
   },
   template: "#skills-list"
 });

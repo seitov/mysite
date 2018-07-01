@@ -1,0 +1,34 @@
+script(type="text/x-template")#slider
+  .slider
+    descriptions(
+      :work="currentWork"
+    )
+    demonstrations(
+      :work="currentWork"
+    )
+    btns(
+      :works="works"
+    )
+
+script(type="text/x-template")#slider-desc    
+  .slider__desc-container
+    .slider__desc
+      .slider__desc-title
+        h2.subtitle {{work.title}}
+      .slider__desc-tech {{work.skills}}  
+      a(:href="work.link" target="_blank").slider__desc-link 
+        +icon("link", "slider__desc-link-icon")
+        span Посмотреть сайт
+
+script(type="text/x-template")#slider-demo    
+  .slider__demo
+    img(:src="work.photo", alt="Image").slider__demo-pic
+
+script(type="text/x-template")#slider-btns    
+  .slider__btns
+    .slider__btn
+      .slider__btn-img
+        img(src="./assets/images/slider-img-2.jpg", alt="Down").slider__btn-pic  
+    .slider__btn.slider__btn-next
+      .slider__btn-img 
+        img(src="./assets/images/slider-img-3.jpg", alt="Down").slider__btn-pic  

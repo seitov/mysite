@@ -5,6 +5,7 @@ block variables
 
 block scripts
   script(src='about.bundle.js')
+  script(src='works.bundle.js')
 
 block content
   section.hero
@@ -53,38 +54,9 @@ block content
         h1.partfolio__title-text - Мои работы -
         .partfolio__title-pic
           img(src="./assets/images/works_header.svg", alt="").section-title__pic
-    .partfolio__left
-      - 
-        var partfolio__desc = [
-              ['Сайт школы онлайн Образования', 'HTML , CSS, JAVASCRIPT', 'Посмотреть сайт', 'link']
-              //- ['Второй Сайт', 'Tech', 'Посмотреть сайт'],
-              //- ['Третий сайт', 'Tech', 'Посмотреть сайт']
-            ]
-
-      .partfolio__desc-block
-        ul.partfolio__desc
-          each item in partfolio__desc
-            li.partfolio__desc-item
-              h2.partfolio__desc-title #{item[0]}
-              .partfolio__desc-tech #{item[1]}
-              a(href="#").partfolio__desc-link
-                +icon(item[3], 'partfolio__desc-link-icon') 
-                span #{item[2]}
-              
-                      
-
-    .partfolio__right
-      .partfolio__slider 
-        .partfolio__slider-image
-          img(src="./assets/images/slider.png", alt="Slider-img")
-        .partfolio__slider-element
-          a(href="#").partfolio__slider-link
-            .partfolio__slider-prev
-            img(src="./assets/images/arrow_down.svg", alt="Down").arrow.arrow__prev  
-          a(href="#").partfolio__slider-link
-            .partfolio__slider-next 
-            img(src="./assets/images/arrow_down.svg", alt="Down").arrow.arrow__next   
-  
+   
+    .slider__container
+      #slider__component 
   
   section.reviews
     .reviews__container  
@@ -110,16 +82,17 @@ block content
             .reviews__info-profile
               .reviews__info-name Владимир Сабанцев
               .reviews__info-desc преподаватель
-        
+
       .reviews__form-container
         form.form.form__blured#form-blured(action="post")
+          //- img(src="./assets/images/reviews-bg.jpg", alt="")
           .form__bg
           .form__wrap
             h2.form__title - Связаться со мной -
             .form__row
-              input(type="text" name="name" placeholder="Ваш имя").form__input
+              input(type="text" name="name" placeholder="Ваш имя" autocomplete="on").form__input
             .form__row
-              input(type="text" name="email" placeholder="Ваш Email").form__input
+              input(type="text" name="email" placeholder="Ваш Email" autocomplete="on").form__input
             .form__row
               textarea(name="", cols="30", rows="10" placeholder="Введите сообщение").form__textarea
           .form__btns

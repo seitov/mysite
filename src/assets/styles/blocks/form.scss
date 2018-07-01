@@ -1,14 +1,19 @@
+.reviews__form-container {
+  position: relative;
+  height: 435px;
+  width: 380px;
+}
 .form {
   height: 435px;
   width: 380px;
   position: relative;
   overflow: hidden;
+  border-radius: 5px;
   &__blured {
     .form__bg {
       background-image: url('./assets/images/reviews-bg.jpg');
       background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 10px 10px 0 0;
+      background-size: auto;
     }
   }
   &__bg {
@@ -17,8 +22,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    filter: blur(10px);
-    border-radius: 5px;
+    filter: blur(15px);
   }
   &__wrap {
     height: 88.9%;
