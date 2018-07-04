@@ -48,9 +48,9 @@ block content
           svg(viewBox="0 0 600 100" preserveAspectRatio="none").triangle 
             polygon(points="600 0, 600 100, 0 100" style="fill:#fff")      
   section.blog
-    .blog__container
-      .blog__left
-        nav.blog__nav
+    .blog__container#blog-container
+      .blog__left#blog-left
+        nav.blog__nav#blog-nav
           - 
             var blog__list = [
               ['Самое важное в SASS', '#id', 'blog__link-active'],

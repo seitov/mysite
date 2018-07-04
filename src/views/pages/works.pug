@@ -84,21 +84,25 @@ block content
               .reviews__info-desc преподаватель
 
       .reviews__form-container
-        form.form.form__blured#form-blured(action="post")
-          //- img(src="./assets/images/reviews-bg.jpg", alt="")
+        form(action="server.php" id="form").form.form__blured
           .form__bg
           .form__wrap
+            
             h2.form__title - Связаться со мной -
             .form__row
-              input(type="text" name="name" placeholder="Ваш имя" autocomplete="on").form__input
+              input(type="text" name="name" placeholder="Ваше имя" autocomplete="on" id="name").form__input.form__field
             .form__row
-              input(type="text" name="email" placeholder="Ваш Email" autocomplete="on").form__input
+              input(type="text" name="email" placeholder="Ваш Email" autocomplete="on" id="email").form__input.form__field
             .form__row
-              textarea(name="", cols="30", rows="10" placeholder="Введите сообщение").form__textarea
+              textarea(cols="30" rows="10" placeholder="Введите сообщение" id="text").form__textarea.form__field
           .form__btns
-            input(type="submit" value="Отправить").form__btn  
-            input(type="reset" value="Очистить").form__btn   
+            button(type="submit" value="Отправить" id="form-btn").form__btn Отправить
+            input(type="reset" value="Очистить").form__btn    
 
-    .up__btn
-      a(href="#").up__btn-link
-        img(src="./assets/images/arrow_down.svg", alt="btn").up__btn-img     
+      .up__btn
+        a(href="#").up__btn-link
+          img(src="./assets/images/arrow_down.svg", alt="btn").up__btn-img  
+
+  .form__modal
+    .form__modal-message Собщение отправлено
+    button.form__modal-btn Закрыть 

@@ -1,22 +1,21 @@
 var blur = (function() {
-  var wrapper = document.querySelector(".reviews"),
-    form = document.querySelector(".form__bg");
-
+  var form = document.querySelector(".form__bg");
   return {
-    set: function() {
-      var imgWidth = document.querySelector(".reviews").offsetWidth,
-        posLeft = -wrapper.offsetLeft,
-        posTop = -wrapper.offsetTop,
-        blurCSS = form.style;
+    set: () => {
+      var review = document.querySelector(".reviews");
+      var formWrapper = document.querySelector(".reviews__form-container");
+      var topReview = review.offsetTop;
+      var heightReview = review.getBoundingClientRect().height;
+      var wrapperTop = formWrapper.offsetTop;
+      var dif = topReview - wrapperTop;
+      var blurCSS = form.style;
 
-      blurCSS.backgroundSize = imgWidth + "px" + " " + "auto";
-      blurCSS.backgroundPosition = posLeft + "px" + " " + posTop + "px";
+      blurCSS.backgroundSize = `auto ${heightReview}px`;
+      blurCSS.backgroundPosition = `${-formWrapper.offsetLeft}px ${dif}px`;
     }
   };
 })();
-
 blur.set();
-
 window.onresize = function() {
   blur.set();
 };

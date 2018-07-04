@@ -8,6 +8,8 @@ script(type="text/x-template")#slider
     )
     btns(
       :works="works"
+      :currentIndex="currentIndex"
+      @slide="handleSlide"
     )
 
 script(type="text/x-template")#slider-desc    
@@ -15,7 +17,7 @@ script(type="text/x-template")#slider-desc
     .slider__desc
       .slider__desc-title
         h2.subtitle {{work.title}}
-      .slider__desc-tech {{work.skills}}  
+      .slider__desc-tech(:key="work.skills") {{work.skills}}  
       a(:href="work.link" target="_blank").slider__desc-link 
         +icon("link", "slider__desc-link-icon")
         span Посмотреть сайт
@@ -26,9 +28,11 @@ script(type="text/x-template")#slider-demo
 
 script(type="text/x-template")#slider-btns    
   .slider__btns
-    .slider__btn
-      .slider__btn-img
-        img(src="./assets/images/slider-img-2.jpg", alt="Down").slider__btn-pic  
-    .slider__btn.slider__btn-next
-      .slider__btn-img 
-        img(src="./assets/images/slider-img-3.jpg", alt="Down").slider__btn-pic  
+    .slider__btn(@click="slide('prev')")
+      transition-group(name="slide-down" tag="div").slider__btn-img-container
+        .slider__btn-img(:key="getReqImage('prev').photo")
+          img(:src="getReqImage('prev').photo", alt="Down").slider__btn-pic  
+    .slider__btn.slider__btn-next(@click="slide('next')")
+      transition-group(name="slide-up" tag="div").slider__btn-img-container
+        .slider__btn-img(:key="getReqImage('next').photo")
+          img(:src="getReqImage('next').photo", alt="Down").slider__btn-pic  

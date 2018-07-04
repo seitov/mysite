@@ -1,0 +1,26 @@
+.form__fail {
+  position: absolute;
+  color: #fff;
+  background: #e44845;
+  padding: 10px 15px;
+  z-index: 30;
+  border-radius: 5px;
+  margin-top: 15px;
+  bottom: -55px;
+  &-text {
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 0;
+      width: 0;
+      border: 10px solid transparent;
+      border-bottom-color: #e44845;
+      border-top-width: 0px;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-70%);
+    }
+  }
+}

@@ -88,6 +88,7 @@
   max-width: 90%;
   max-height: 90%;
   display: block;
+  transition: 1s;
 }
 
 .slider__btns {
@@ -99,9 +100,14 @@
   width: 50%;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
   user-select: none;
   transition: .4s;
   opacity: 0.8;
+  border-right: 1px solid #c5c4c0;
+  &:last-child {
+    border-right: none;
+  }
   &:hover {
     opacity: 1;
   }
@@ -134,14 +140,64 @@
 }
 
 .slider__btn-img {
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
+  bottom: 0;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider__btn-pic {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.slider__btn-img-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   height: 100%;
   width: 100%;
+}
+
+.slide-down-enter-active, .slide-down-leave-active {
+  transition: 1s;
+}
+
+.slide-down-leave {
+  bottom: 0;
+}
+
+.slide-down-leave-to {
+  bottom: -100%;
+}
+
+.slide-down-enter {
+  bottom: 100%;
+}
+
+.slide-down-enter-to {
+  bottom: 0;
+}
+
+.slide-up-enter-active, .slide-up-leave-active {
+  transition: 1s;
+}
+
+.slide-up-leave {
+  bottom: 0;
+}
+
+.slide-up-leave-to {
+  bottom: 100%;
+}
+
+.slide-up-enter {
+  bottom: -100%;
+}
+
+.slide-up-enter-to {
+  bottom: 0;
 }
