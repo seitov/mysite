@@ -34,6 +34,11 @@
   &__pic {
     max-width: 400px;
     max-height: 400px;
+    
+    overflow: hidden;
+    img {
+      border-radius: 10px;
+    }
   }
   &__triangle {
     top: -110px;
@@ -162,9 +167,14 @@
   transform: translateY(-50%);
   text-align: center;
   width: 100%;
-  font-size: 14px;
+  font-size: 13px;
   color: $green;
   word-wrap: break-word;
+  font-weight: 500;
+  &-text {
+    display: inline-block;
+    width: 62px;
+  }
 }
 
 .contacts__link {

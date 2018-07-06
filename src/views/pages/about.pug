@@ -34,7 +34,7 @@ block content
           .user__description-name Нуркен Сеитов
           .user__description-info Личный сайт веб разрабочика
 
-    a(href="#").down-btn.hero__down-btns
+    a(href="#about").down-btn.hero__down-btns.scroll__btn
       img(src="./assets/images/arrow_down.svg", alt="btn")
 
     .hero__triangles
@@ -47,7 +47,7 @@ block content
           svg(viewBox="0 0 600 100" preserveAspectRatio="none").triangle 
             polygon(points="600 0, 600 100, 0 100" style="fill:#eeebdf")        
 
-  section.about
+  section.about#about
     .about__left
       .about__wrap
         h1.about__title - Обо мне -  
@@ -74,7 +74,7 @@ block content
           #skills-container         
           
   section.map
-    .map__container
+    .map__container#map-section
       .map__contacts
         h2.map__contacts-title - Контакты -
         - 
@@ -90,4 +90,6 @@ block content
               a(href=`${item[2]}`).contacts__link
                 +icon(item[0], 'contacts__icon')  
                 .contacts__text #{item[1]}
-          
+
+  
+            

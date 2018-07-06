@@ -1,3 +1,9 @@
+.blog__right {
+  width: 80%;
+  @include tablets {
+    width: 100%;
+  }
+}
 .post {
   border-bottom: 5px solid #f1f1f2;
   padding-bottom: 70px;

@@ -3,3 +3,4 @@ import "./modules/humburger";
 import "./modules/blur";
 import "./modules/slider";
 import "./modules/form-validate";
+import "./modules/scroll";

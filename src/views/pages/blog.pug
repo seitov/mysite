@@ -4,7 +4,6 @@ block variables
   - var title = 'Блог'
 
 block scripts
-  script(src='about.bundle.js')
   script(src='blog.bundle.js')
 
 block content
@@ -35,7 +34,7 @@ block content
           .blog__hero-title - Блог -
           .user__description-info Статьи, которые я написал
 
-    a(href="#").down-btn.hero__down-btns
+    a(href="#blog").down-btn.hero__down-btns.scroll__btn
       img(src="./assets/images/arrow_down.svg", alt="btn")
 
     .hero__triangles
@@ -47,16 +46,16 @@ block content
         .triangles__right 
           svg(viewBox="0 0 600 100" preserveAspectRatio="none").triangle 
             polygon(points="600 0, 600 100, 0 100" style="fill:#fff")      
-  section.blog
+  section.blog#blog
     .blog__container#blog-container
       .blog__left#blog-left
         nav.blog__nav#blog-nav
           - 
             var blog__list = [
-              ['Самое важное в SASS', '#id', 'blog__link-active'],
-              ['Приёмы в вёрстке, без которых не обходится ни один сайт', '#id', ''],
-              ['Самый необходимый набор Gulp плагинов', '#id', ''],
-              ['Почему я выбрал Jade', '#id', '']
+              ['Самое важное в SASS', '#1', 'blog__link-active'],
+              ['Приёмы в вёрстке, без которых не обходится ни один сайт', '#2', ''],
+              ['Самый необходимый набор Gulp плагинов', '#3'],
+              ['Почему я выбрал Jade', '#4', '']
             ]
           ul.blog__list
             each item in blog__list
@@ -67,7 +66,7 @@ block content
 
       .blog__right
         .blog__content
-          article.post
+          article.post#1
             h2.post__title Самое важное в SASS
             .post__date 22 ноября 2016
             .post__text
@@ -75,7 +74,7 @@ block content
               p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
               .post__pic
                 img(src="./assets/images/post-img.jpg", alt="Post img").post__img
-          article.post
+          article.post#2
             h2.post__title Приёмы в вёрстке, без которых не обходится ни один сайт
             .post__date 13 ноября 2016
             .post__text
@@ -83,5 +82,21 @@ block content
 
               p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
               
+          article.post#3
+            h2.post__title Самый необходимый набор Gulp плагинов
+            .post__date 13 ноября 2016
+            .post__text
+              p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
 
+              p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+              
+          article.post#4
+            h2.post__title Почему я выбрал Jade
+            .post__date 13 ноября 2016
+            .post__text
+              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique nemo vero est aliquid maiores ducimus mollitia labore officia natus. Tempora dolorem ipsa optio quam facere modi, consectetur nam recusandae quidem!
+              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique nemo vero est aliquid maiores ducimus mollitia labore officia natus. Tempora dolorem ipsa optio quam facere modi, consectetur nam recusandae quidem!
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quas quae, esse nulla libero ducimus sunt sed voluptate voluptatum alias, dolorem aliquid quis ut, quod aspernatur maxime officiis nemo doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quas quae, esse nulla libero ducimus sunt sed voluptate voluptatum alias, dolorem aliquid quis ut, quod aspernatur maxime officiis nemo doloremque? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam earum voluptates sapiente obcaecati aliquid assumenda adipisci, architecto, officiis tempora porro iure, corrupti cupiditate commodi vitae nihil perspiciatis culpa. Quibusdam, debitis.
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quas quae, esse nulla libero ducimus sunt sed voluptate voluptatum alias, dolorem aliquid quis ut, quod aspernatur maxime officiis nemo doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quas quae, esse nulla libero ducimus sunt sed voluptate voluptatum alias, dolorem aliquid quis ut, quod aspernatur maxime officiis nemo doloremque? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam earum voluptates sapiente obcaecati aliquid assumenda adipisci, architecto, officiis tempora porro iure, corrupti cupiditate commodi vitae nihil perspiciatis culpa. Quibusdam, debitis.
+              
 

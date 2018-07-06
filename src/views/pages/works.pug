@@ -4,11 +4,10 @@ block variables
   - var title = 'Мои работы'
 
 block scripts
-  script(src='about.bundle.js')
   script(src='works.bundle.js')
 
 block content
-  section.hero
+  section.hero#hero
     - 
       var hero__socials = [
         ['vk', 'https://vk.com/seitov_nurken'],
@@ -35,7 +34,7 @@ block content
           .user__description-name Нуркен Сеитов
           .user__description-info Личный сайт веб разрабочика
 
-    a(href="#").down-btn.hero__down-btns
+    a(href="#slider-section").down-btn.hero__down-btns.scroll__btn
       img(src="./assets/images/arrow_down.svg", alt="btn")
 
     .hero__triangles
@@ -55,7 +54,7 @@ block content
         .partfolio__title-pic
           img(src="./assets/images/works_header.svg", alt="").section-title__pic
    
-    .slider__container
+    .slider__container#slider-section
       #slider__component 
   
   section.reviews
@@ -100,7 +99,7 @@ block content
             input(type="reset" value="Очистить").form__btn    
 
       .up__btn
-        a(href="#").up__btn-link
+        a(href="#hero").up__btn-link.scroll__btn
           img(src="./assets/images/arrow_down.svg", alt="btn").up__btn-img  
 
   .form__modal
