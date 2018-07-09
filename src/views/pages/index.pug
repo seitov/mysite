@@ -63,41 +63,7 @@ block content
                     a.welcome__menu-link(href="./blog.html") Блог
                     
         .welcome__content.welcome__content-log-in
-          form(action="post").log-in-form
-            h2.log-in-form__title - Авторизуйтесь -
-            .log-in-form__row
-              .log-in-form__icon 
-                span 
-              input(type="text" placeholder="Логин" autocomplete="on").log-in-form__input
-            .log-in-form__row
-              .log-in-form__icon
-                span 
-              input(type="password" placeholder="Пароль" autocomplete="on").log-in-form__input
-            .log-in-form__row.log-in-form__row-radio
-              label(for="human").log-in-form__checkbox
-                input(type="checkbox")#human.log-in-form__checkbox-input
-                .log-in-form__checkbox-text
-                  .log-in-form__checkbox-btn
-                  span Я человек
-                  
-            .log-in-form__question Вы точно человек? 
-            .log-in-form__row.log-in-form__row-radio
-              label(for="Yes").log-in-form__radio
-                input(type="radio" name="human" value="Да")#Yes.log-in-form__radio-input
-                .log-in-form__radio-text
-                  .log-in-form__radio-btn
-                  span Да
-              label(for="No").log-in-form__radio
-                input(type="radio" name="human" value="Да")#No.log-in-form__radio-input
-                .log-in-form__radio-text
-                  .log-in-form__radio-btn
-                  span Не уверен
-
-            .log-in-form__btns                         
-              a(href="./index.html").log-in-form__link 
-                span На главную
-              input(type="submit" value="Войти").form__btn
-
+          #auth-component
 
     .welcome__copyright 
       .welcome__copyright-name © Нуркен Сеитов |
