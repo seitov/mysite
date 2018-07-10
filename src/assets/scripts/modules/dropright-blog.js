@@ -4,8 +4,8 @@ var link = document.querySelectorAll(".blog__link");
 
 // При нажатии на dropright__btn фиксируем навигацию статей
 
-btn.addEventListener("click", function() {
-  event.preventDefault();
+btn.addEventListener("click", function(e) {
+  e.preventDefault();
   dropRight.classList.toggle("blog__left-fixed");
 });
 
@@ -13,7 +13,7 @@ btn.addEventListener("click", function() {
 
 [].forEach.call(link, function(link) {
   link.addEventListener("click", function(e) {
-    event.preventDefault();
+    e.preventDefault();
     dropRight.classList.remove("blog__left-fixed");
   });
 });
