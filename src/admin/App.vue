@@ -1,111 +1,73 @@
 <template lang="pug">
-  .container
-    app-header
-    app-tabs
+  #root
+    .header
+      app-header(name="header") 
+    .tabs
+      router-view(name="tabs")
+    .content
+      router-view
 </template>
 
 <script>
+import header from "./components/header";
+import tabs from "./components/tabs";
+import skills from "./components/skills";
+const data = [
+  { id: 1, title: "Html", percent: 20, category: 0 },
+  { id: 2, title: "PHP", percent: 20, category: 1 },
+  { id: 3, title: "CSS", percent: 20, category: 0 },
+  { id: 4, title: "Node.js", percent: 20, category: 1 },
+  { id: 5, title: "Mongo", percent: 20, category: 1 },
+  { id: 6, title: "Git", percent: 20, category: 2 },
+  { id: 7, title: "Gulp", percent: 20, category: 2 }
+];
+import { mapActions, mapState, mapGetters } from "vuex";
 export default {
   components: {
-    appHeader: require("./components/header").default,
-    appTabs: require("./components/tabs").default
+    appHeader: header,
+    tabs,
+    skills
+  },
+  created() {
+    // this.getUserInfo();
+  },
+  methods: {
+    ...mapActions(["getUserInfo"])
   }
 };
 </script>
-
-<style>
-body {
+<style lang="scss">
+body,
+html {
+  margin: 0;
   height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
 }
-
-h1,
-h2,
-h3 {
-  margin: 0;
-  padding: 0;
-}
-
 .wrapper {
-  width: 100%;
+  height: 100%;
 }
-.admin__header {
+#root {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+.header {
   height: 80px;
-  width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #fff;
-  background: #00bfa5;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
-
-.admin__title {
-  width: 50%;
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+  }
 }
-
-.admin__link {
-  text-align: end;
-  width: 50%;
-  color: #fff;
-  opacity: 0.5;
-  transition: 0.4s;
+* {
+  box-sizing: border-box;
 }
-.admin__link:hover {
-  opacity: 1;
-}
-
-.tabs__wrap {
-  height: 60px;
-  background-color: #f0efe9;
-  font-family: Arial;
-  color: #455a64;
-  text-transform: uppercase;
-  display: block;
-  align-items: center;
-}
-
 .tabs {
-  height: 100%;
-  display: flex;
+  height: 60px;
 }
-
-.tabs__labels {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 0 70px;
-  height: 100%;
-  background-color: #f0efe9;
-  border-right: 2px solid #fff;
-}
-
-.tabs__input {
-  display: none;
-}
-
-.tabs__input:checked + label {
-  background-color: #fff;
-  color: #00bfa5;
-}
-
 .content {
-  position: relative;
-  height: 600px;
-}
-
-.content__page {
-  width: 100%;
-  padding: 70px 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  display: none;
-  min-height: 200px;
-  border-top: 5px solid #e74c3c;
-  border-radius: 0 10px 10px 10px;
+  flex: 1;
+  padding: 20px;
 }
 </style>

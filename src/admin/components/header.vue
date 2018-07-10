@@ -1,5 +1,20 @@
 <template lang="pug">
-  header.admin__header
-    h1.admin__title Administration panel
-    a(href="#").admin__link Return to website
+  #header
+    .title Панель администрирования
+    a(href="#").exit Вернуться на сайт
 </template>
+
+<style lang="scss" scoped>
+#header {
+  background: $green;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  color: #fff;
+  height: 100%;
+}
+.exit {
+  color: inherit;
+}
+</style>
