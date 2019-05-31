@@ -34,6 +34,10 @@
     color: #c4cbcd;
     justify-content: center;
     align-items: center;
+    transition: .4s;
+  }
+  &__icon--error {
+    color: red;
   }
   &__input {
     padding: 10px 15px;
@@ -41,9 +45,14 @@
     outline: none;
     border: 1px solid #fff;
     border-radius: 0 5px 5px 0;
+    transition: .4s;
     &:focus {
       border: 1px solid $green;
     }
+  }
+  &__input--error {
+    border: 1px solid red;
+    color: red;
   }
   &__checkbox {
     position: relative;
