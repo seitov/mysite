@@ -2,16 +2,30 @@ script(type="text/x-template")#auth-form
   form(method="post").log-in-form
     h2.log-in-form__title - Авторизуйтесь -
     .log-in-form__row
-      .log-in-form__icon 
+      .log-in-form__icon(:class="{'log-in-form__icon--error': $v.user.name.$error}") 
         span 
-      input(type="text" placeholder="Логин" autocomplete="on" v-model="user.name").log-in-form__input
+      input(type="text" 
+            placeholder="Логин" 
+            autocomplete="on" 
+            v-model="user.name" 
+            :class="{'log-in-form__input--error': $v.user.name.$error}"
+      ).log-in-form__input
     .log-in-form__row
-      .log-in-form__icon
+      .log-in-form__icon(:class="{'log-in-form__icon--error': $v.user.password.$error}")
         span 
-      input(type="password" placeholder="Пароль" autocomplete="on" v-model="user.password").log-in-form__input
+      input(type="password" 
+            placeholder="Пароль" 
+            autocomplete="on" 
+            v-model="user.password" 
+            :class="{'log-in-form__input--error': $v.user.password.$error}"
+      ).log-in-form__input
     .log-in-form__row.log-in-form__row-radio
       label(for="human").log-in-form__checkbox
-        input(type="checkbox")#human.log-in-form__checkbox-input
+        input(type="checkbox"
+              id="human"
+              value="captcha.check" 
+              v-model="captcha.check"
+        ).log-in-form__checkbox-input
         .log-in-form__checkbox-text
           .log-in-form__checkbox-btn
           span Я человек
@@ -19,12 +33,22 @@ script(type="text/x-template")#auth-form
     .log-in-form__question Вы точно человек? 
     .log-in-form__row.log-in-form__row-radio
       label(for="Yes").log-in-form__radio
-        input(type="radio" name="human" value="Да")#Yes.log-in-form__radio-input
+        input(type="radio"
+              id="Yes" 
+              name="human" 
+              value="true"
+              v-model="captcha.confirm"
+        ).log-in-form__radio-input
         .log-in-form__radio-text
           .log-in-form__radio-btn
           span Да
       label(for="No").log-in-form__radio
-        input(type="radio" name="human" value="Да")#No.log-in-form__radio-input
+        input(type="radio"
+              id="No" 
+              name="human" 
+              value="false"
+              v-model="captcha.confirm"
+        ).log-in-form__radio-input
         .log-in-form__radio-text
           .log-in-form__radio-btn
           span Не уверен
@@ -32,4 +56,4 @@ script(type="text/x-template")#auth-form
     .log-in-form__btns                         
       a(href="./index.html").log-in-form__link 
         span На главную
-      input(type="button" value="Войти" @click="login").form__btn
+      input(type="button" value="Войти" @click="login" :disabled="!captcha.check || !captcha.confirm").form__btn
